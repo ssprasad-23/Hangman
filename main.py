@@ -14,13 +14,13 @@ class Hangman:
 			self.winword = random.choice(self.word)
 			#print the word in board
 			# print(self.winword)
-			self.set_up()
+			self.setUp()
 			self.play()
 
 		else:
 			sys.exit("ttyl")
 
-	def set_up(self):
+	def setUp(self):
 		for ch in range(len(self.winword)):
 			self.board.append('_')
 		print("lives" + str(self.lives))
@@ -53,7 +53,7 @@ class Hangman:
 	def checkIfWin(self):
 		board_str = ''.join([str(ch) for ch in self.board])
 		if board_str == self.winword:
-			print("congrats yuou won!! :)")
+			print("congrats you won!! :)")
 			sys.exit()
 
 new = Hangman()
